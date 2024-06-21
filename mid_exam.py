@@ -56,7 +56,7 @@ class Hall:
                 # for col in range(len(seat_matrix[row])):
             print(f" {seat_matrix}\n")
         else:
-            print(f"Show with id {id} not found.")
+            print(f"Show id {id} not found.")
 
 hall = Hall()
 hall.entry_show(1,'Puspa','10 am')
@@ -76,11 +76,11 @@ while True:
     if choice == 1:
         hall.view_show_list()
     elif choice == 2:
-        show_id = int(input("Enter show ID: "))
+        show_id = int(input("Enter show id: "))
         hall.view_available_seats(show_id)
     elif choice == 3:
-        show_id = int(input("Enter show ID: "))
-        user_input = input("Enter seats to book (e.g., 0,1 1,2 2,3): ")
+        show_id = int(input("Enter show id: "))
+        user_input = input("Enter seats to book (example: 0,1 1,2 2,3): ")
         seat_list = [tuple(map(int, seat.split(','))) for seat in user_input.split()]
         hall.book_seats(show_id, seat_list)
     elif choice == 4:
